@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PotraitInfo : MonoBehaviour {
+public class PortraitInfo : MonoBehaviour {
 
     public int posX;
     public int posY;
