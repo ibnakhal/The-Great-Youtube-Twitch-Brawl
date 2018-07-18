@@ -50,7 +50,7 @@ public class SelectScreenManager : MonoBehaviour
 
         portraitPrefabs = portraitCanvas.GetComponentsInChildren<PortraitInfo>();
 
-        for (int i = 0; i < portraitPrefabs.Length - 1; i++)
+        for (int i = 0; i < portraitPrefabs.Length ; i++)
         {
             portraitPrefabs[i].posX += x;
             portraitPrefabs[i].posY += y;
@@ -209,6 +209,8 @@ public class SelectScreenManager : MonoBehaviour
         pl.selector.SetActive(true);
 
         pl.activePortrait = charGrid[pl.ActiveX, pl.ActiveY];
+
+        Debug.Log(pl.activePortrait.transform.localPosition);
 
         Vector2 selectorPosition = pl.activePortrait.transform.localPosition;
         selectorPosition = selectorPosition + new Vector2(portraitCanvas.transform.localPosition.x, portraitCanvas.transform.localPosition.y);
