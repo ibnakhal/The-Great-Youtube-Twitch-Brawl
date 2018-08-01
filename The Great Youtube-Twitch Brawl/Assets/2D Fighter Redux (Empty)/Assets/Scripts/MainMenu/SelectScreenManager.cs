@@ -26,6 +26,9 @@ public class SelectScreenManager : MonoBehaviour
 
     public float SelectMoveDelay;
 
+    public AudioClip confirmClip;
+    public AudioSource confirmSource;
+
     #region Singleton
     public static SelectScreenManager instance;
     public static SelectScreenManager GetInstance()
@@ -176,7 +179,15 @@ public class SelectScreenManager : MonoBehaviour
             //tell the character manager what preafb to instantiate
             pl.playerBase.playerPrefab = charManager.returnCharacterWithID(pl.activePortrait.characterId).prefab;
 
+            confirmClip = charManager.returnCharacterWithID(pl.activePortrait.characterId).selectionClip;
+
+            confirmSource.clip = confirmClip;
+
+            confirmSource.Play();
+
             pl.playerBase.hasCharacter = true;
+
+
 
         }
 
@@ -218,6 +229,7 @@ public class SelectScreenManager : MonoBehaviour
         pl.selector.transform.localPosition = selectorPosition;
     }
 
+    //mouse over character
     void HandleSelectorPreview(PlayerInterfaces pl)
     {
         if(pl.previewPortrait != pl.activePortrait)

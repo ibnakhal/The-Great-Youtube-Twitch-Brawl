@@ -78,4 +78,6 @@ public class CharacterBase
 {
     public string charId;
     public GameObject prefab;
+    public Sprite image;
+    public AudioClip selectionClip;
 }

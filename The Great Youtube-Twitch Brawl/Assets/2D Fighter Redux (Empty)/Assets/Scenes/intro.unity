@@ -467,7 +467,7 @@ MonoBehaviour:
     score: 0
   - playerId: Player 2
     inputId: 1
-    playerType: 1
+    playerType: 0
     hasCharacter: 0
     playerPrefab: {fileID: 0}
     playerStates: {fileID: 0}
@@ -475,12 +475,20 @@ MonoBehaviour:
   characterList:
   - charId: Zer0Doxy
     prefab: {fileID: 126410, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 2}
+    image: {fileID: 21300000, guid: 0e6da7ba31bdaf2418941920f10fb1a8, type: 3}
+    selectionClip: {fileID: 8300000, guid: 48e89bcb3cbcd514da20880ab12d09ec, type: 3}
   - charId: Deafinition
     prefab: {fileID: 126410, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 2}
+    image: {fileID: 21300000, guid: c01022c2289db3e45b43b895c9bed8a1, type: 3}
+    selectionClip: {fileID: 8300000, guid: dc84759f2059e594aaaa367d567bd462, type: 3}
   - charId: CatOnMarz
     prefab: {fileID: 126410, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 2}
+    image: {fileID: 21300000, guid: d6b9ee0d16f4eb247b82a80bfd6ad1ce, type: 3}
+    selectionClip: {fileID: 8300000, guid: 0ea0741a5dd2a914f9d9b639ec46966d, type: 3}
   - charId: DunceBass
     prefab: {fileID: 126410, guid: 5eb09603fd896ed4bb16435d222ab45a, type: 2}
+    image: {fileID: 21300000, guid: 177386a5ee90d204d93b86739e24884c, type: 3}
+    selectionClip: {fileID: 8300000, guid: 7f3e35e3f0136b94c955b884aad7dbcd, type: 3}
 --- !u!1001 &317923008
 Prefab:
   m_ObjectHideFlags: 0
