@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour {
     private void FixedUpdate()
     {
         //handle player orientation in the scene; compare X positions and judge who is where.
-        if(charM.players[0].playerStates.transform.position.x<charM.players[1].playerStates.transform.position.x)
+        if(charM.players[0].playerStates.transform.position.x < charM.players[1].playerStates.transform.position.x)
         {
             charM.players[0].playerStates.lookRight = true;
             charM.players[1].playerStates.lookRight = false;
