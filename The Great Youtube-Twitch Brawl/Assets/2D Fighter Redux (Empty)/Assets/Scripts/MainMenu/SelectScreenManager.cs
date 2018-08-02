@@ -88,7 +88,7 @@ public class SelectScreenManager : MonoBehaviour
                         plInterfaces[i].playerBase = charManager.players[i];
                         HandleSelectorPosition(plInterfaces[i]);
                         HandleScreenInput(plInterfaces[i], charManager.players[i].inputId);
-                        HandleSelectorPreview(plInterfaces[i]);
+                        HandleCharacterPreview(plInterfaces[i]);
                     }
                 }
                 else
@@ -174,7 +174,7 @@ public class SelectScreenManager : MonoBehaviour
         //character has been selected
         if (Input.GetButtonUp("Block" + playerId))
         {
-            //reaction goes here, 
+            //reaction goes here 
 
             //tell the character manager what preafb to instantiate
             pl.playerBase.playerPrefab = charManager.returnCharacterWithID(pl.activePortrait.characterId).prefab;
@@ -185,6 +185,7 @@ public class SelectScreenManager : MonoBehaviour
 
             confirmSource.Play();
 
+            
             pl.playerBase.hasCharacter = true;
 
 
@@ -194,6 +195,7 @@ public class SelectScreenManager : MonoBehaviour
 
         
     }
+
 
     IEnumerator LoadLevel()
     {
@@ -229,8 +231,8 @@ public class SelectScreenManager : MonoBehaviour
         pl.selector.transform.localPosition = selectorPosition;
     }
 
-    //mouse over character
-    void HandleSelectorPreview(PlayerInterfaces pl)
+    //mouse over character stuff - find out how to get smooth animations instead of character prefab so that menus can move better
+    void HandleCharacterPreview(PlayerInterfaces pl)
     {
         if(pl.previewPortrait != pl.activePortrait)
         {
@@ -245,7 +247,7 @@ public class SelectScreenManager : MonoBehaviour
 
             if(string.Equals(pl.playerBase.playerId, charManager.players[0].playerId))
             {
-                //pl.createdCharacter.GetComponent<StateManager>().lookRight = false;
+                pl.createdCharacter.GetComponent<StateManager>().lookRight = false;
             }
         }
     }
